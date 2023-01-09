@@ -25,3 +25,53 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+R version
+
+```{r}
+R.version.string
+
+```
+
+Update your R packages:
+
+```{r}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+```
+
+Install Git
+
+Git already installed
+
+Introduce yourself to git
+
+```{r}
+## install if needed (do this exactly once):
+## install.packages("usethis")
+
+library(usethis)
+use_git_config(user.name = "MohKyi", user.email = "mohmohkyi@protonmail.com")
+```
+
+Git configure
+
+```{r}
+usethis::git_default_branch_configure()
+```
+
+Create personal access token
+
+```{r}
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+
+
+```
+
+? Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+-\> Adding new credentials...
+
+-\> Removing credentials from cache...
+
+-\> Done.
